@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Insert User</h2>
+
+<form action="/insert" method="POST">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="password">Password:</label><br>
+  <input type="text" id="password" name="password"><br>
+  <input type="submit" value="Insert">
+</form>
+<br><br>
+
+{{if .}}
+  <h2>{{.}}</h2>
+{{end}}
+<br>
+<a href="/browse">Browse</a>
+</body>
+</html>

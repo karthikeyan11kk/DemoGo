@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browse Users</title>
+</head>
+<body>
+    <h2>All Users</h2>
+    <a href="/insert">Add User</a><br><br><br>
+
+    {{range .}}
+        <div>
+            ID: {{.ID}}<br>
+            Name: {{.Name}}<br>
+            Email: {{.Email}}<br>
+            Password: {{.Password}}<br>
+            <a href="/update?id={{.ID}}">Edit</a>
+            <form action="/delete" method="DELETE">
+                <input type="hidden" name="id" value="{{.ID}}">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    {{end}}
+
+</body>
+</html>

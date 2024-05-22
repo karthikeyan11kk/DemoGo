@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update User</title>
+</head>
+<body>
+    <h2>Update User</h2>
+    <form action="/updateresult" method="POST">
+        <input type="hidden" name="id" value="{{.ID}}">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="{{.Name}}" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="{{.Email}}" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" value="{{.Password}}" required><br><br>
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/browse">Cancel</a>
+</body>
+</html>
